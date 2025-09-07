@@ -43,12 +43,6 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-.lobster-regular {
-  font-family: "Lobster", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -125,5 +119,29 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.baloo-2 {
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* EB Garamond Extra Bold */
+.garamond {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 800; /* replace <weight> with actual number */
+  font-style: normal;
 }
 

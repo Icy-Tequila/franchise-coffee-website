@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import WhyUs from "../sections/why-us";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div id="home">
       {/* Orange section */}
       <div className="relative bg-[#ff5100] w-full min-h-screen overflow-hidden">
         {/* Header */}
@@ -33,7 +34,7 @@ export default function Home() {
             alt="Logo"
             width={90}
             height={90}
-            className="ml-4 mt-2 cursor-pointer"
+            className="ml-4 mt-2 "
           />
 
           {/* Custom Dropdown */}
@@ -42,7 +43,11 @@ export default function Home() {
               onClick={() => setIsOpen(!isOpen)}
               className="bg-white px-4 py-2 shadow-lg rounded-4xl my-7 mr-6 relative z-50 flex items-center cursor-pointer"
             >
-              {isOpen ? <X className="text-[#ff5100]" /> : <Menu className="text-[#ff5100]" />}
+              {isOpen ? (
+                <X className="text-[#ff5100]" />
+              ) : (
+                <Menu className="text-[#ff5100]" />
+              )}
             </button>
 
             {isOpen && (
@@ -53,13 +58,15 @@ export default function Home() {
                     alt="Logo"
                     width={90}
                     height={90}
-                    className="cursor-pointer"
                   />
                 </div>
                 <ul className="flex flex-col gap-2">
-                  <li className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer">
+                  <a
+                    href="#why-us"
+                    className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer"
+                  >
                     Why us
-                  </li>
+                  </a>
                   <li className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer">
                     Franchise
                   </li>
@@ -110,7 +117,9 @@ export default function Home() {
       </div>
 
       {/* Next section */}
-      <div className="bg-white w-full h-[500px]"></div>
+      <div id="why-us">
+        <WhyUs />
+      </div>
     </div>
   );
 }

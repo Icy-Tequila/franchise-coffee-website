@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"><head><style>{`@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');`}</style></head>
+    <html lang="en"><head><style>{`@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');`}</style></head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
