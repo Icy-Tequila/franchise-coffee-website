@@ -64,16 +64,26 @@ export default function Home() {
                   <a
                     href="#why-us"
                     className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer"
+                    onClick={() => setIsOpen(false)}
                   >
                     Why us
                   </a>
-                  <li className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer">
+                  <li
+                    className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Franchise
                   </li>
-                  <li className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer">
+                  <li
+                    className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Our Story
                   </li>
-                  <li className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer">
+                  <li
+                    className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Stores
                   </li>
                 </ul>
