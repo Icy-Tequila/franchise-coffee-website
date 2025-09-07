@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronUp } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import WhyUs from "../sections/why-us";
 
@@ -126,9 +126,18 @@ export default function Home() {
         </button>
       </div>
 
-      {/* Next section */}
-      <div id="why-us">
+      <div id="why-us" className="relative">
         <WhyUs />
+
+        {/* Sticky scroll-up button */}
+        <div className="sticky bottom-5 mr-5 flex justify-end mt-4">
+          <div
+            className="w-14 bg-white px-4 py-2 shadow-lg rounded-4xl cursor-pointer z-20"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            <ChevronUp className="text-[#ff5100]" />
+          </div>
+        </div>
       </div>
     </div>
   );
