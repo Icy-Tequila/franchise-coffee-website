@@ -51,7 +51,7 @@ export default function Home() {
             </button>
 
             {isOpen && (
-              <div className="absolute top-0 left-0 w-screen ml-[-410px] bg-[#1e2339] text-white p-6 rounded-b-3xl z-40">
+              <div className="fixed top-0 left-0 w-screen bg-[#1e2339] text-white p-6 z-40 rounded-b-3xl">
                 <div className="mb-4 mt-[-16px] ml-[5px]">
                   <Image
                     src="/images/adhira-logo.png"

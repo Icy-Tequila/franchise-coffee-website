@@ -34,7 +34,7 @@ export default function WhyUs() {
           </div>
         </div>
         <div className="flex flex-col items-center mb-10">
-          <div className="w-60 h-70 max-w-sm border-30 border-b-0 border-[#ffe8de] rounded-t-full rounded-b-none overflow-hidden">
+          <div className="w-60 h-70 max-w-sm border-25 border-b-0 border-[#ffe8de] rounded-t-full rounded-b-none overflow-hidden">
             <Image
               src="/images/indian-latitude.avif"
               width={400}
