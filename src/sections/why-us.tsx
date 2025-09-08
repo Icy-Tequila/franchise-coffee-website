@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function WhyUs() {
   return (
     <div className="my-15 flex flex-col items-center">
-      <div className="w-[90%] lg:w-[80%] flex flex-row md:flex-none md:justify-between">
+      <div className="w-[90%] lg:w-[80%] flex flex-col md:flex-row md:justify-between">
         <div className="garamond text-5xl md:text-6xl text-[#1e2339] text-center md:text-start mt-7 mb-12">
           Truly, <span className="text-[#ff5100]">Indian.</span>
         </div>
