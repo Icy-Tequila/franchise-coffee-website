@@ -8,9 +8,9 @@ export default function YoutubeEmbed({ url }: YouTubeEmbedProps) {
   if (!videoId) return null;
 
   return (
-    <div className="relative w-full aspect-[20/9] flex justify-center my-10">
+    <div className="relative w-full aspect-[20/9] flex justify-center my-10 lg:my-0">
       <iframe
-        className="w-[90%] h-full border-0 rounded-t-lg "
+        className="w-[90%] lg:w-full h-full border-0 rounded-t-lg "
         src={`https://www.youtube.com/embed/${videoId}`}
         title="Our company introduction video"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
