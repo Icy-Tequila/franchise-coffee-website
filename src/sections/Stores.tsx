@@ -304,6 +304,96 @@ export default function Stores() {
           </div>
         </div>
       </div>
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr] mt-15 lg:items-center w-[90%] md:w-[80%]">
+        <div className="flex justify-center md:justify-start"><div className="w-[120px] md:w-[150px] lg:w-[200px] h-[120px] md:h-[150px] lg:h-[200px] border-7 border-[#ffe8de] rounded-full overflow-hidden relative ">
+          <Image
+            src="/images/chef-renjith.avif"
+            fill
+            alt="Framed"
+            className="object-cover"
+          />
+        </div></div>
+        <div><div className="garamond text-3xl md:text-6xl text-[#1e2339] text-center md:text-start mt-7 lg:mt-0">
+          <span className="text-[#ff5100]">Deliciously </span>Fabulous
+        </div>
+        <div className="text-lg text-center md:text-start mt-7 mb-5 max-w-[600px]">
+          &quot;At Adhira & Appa, every ingredient, every flavour, tells a story
+          that&apos;s close to the heart bringing tradition, innovation, and
+          warmth to every cup.&quot; <br></br>
+        </div>
+        <div className="font-semibold text-center md:text-start">Chef. Renjith</div></div>
+      </div>
+      <div className="flex flex-col mt-15 items-center w-[90%]">
+        <div className="w-[70%] lg:mb-5">
+          <div className="text-xl text-center my-2">Supply Chain</div>
+          <div className="text-base text-center text-gray-500">
+            From farm to cup, ensuring quality and care at every step
+          </div>
+        </div>
+        <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-2 my-2">
+          <div className="w-full flex flex-col p-2 items-center h-auto text-center">
+            <Image
+              src="/images/sourcing.png"
+              alt=""
+              width={50}
+              height={50}
+              className=""
+            />
+            <div className="w-full mt-2 flex flex-col items-center">
+              <div className="text-base mb-1">Sourcing</div>
+              <div className="text-sm text-black/70 max-w-[200px]">
+                Ethically sourced beans, crafted for the perfect cup.
+              </div>
+            </div>
+          </div>
+          <div className="w-full flex flex-col p-2 items-center h-auto text-center">
+            <Image
+              src="/images/processing.png"
+              alt=""
+              width={50}
+              height={50}
+              className=""
+            />
+            <div className="w-full mt-2 flex flex-col items-center">
+              <div className="text-base mb-1">Processing</div>
+              <div className="text-sm text-black/70 max-w-[200px]">
+                Processed with care to preserve rich flavours.
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full flex flex-col p-2 items-center h-auto text-center">
+            <Image
+              src="/images/packaging.png"
+              alt=""
+              width={50}
+              height={50}
+              className=""
+            />
+            <div className="w-full mt-2 flex flex-col items-center">
+              <div className="text-base mb-1">Packaging</div>
+              <div className="text-sm text-black/70 max-w-[200px]">
+                Packaged to lock in the freshness you deserve.
+              </div>
+            </div>
+          </div>
+          <div className="w-full flex flex-col p-2 items-center h-auto text-center">
+            <Image
+              src="/images/adhira-logo-2.png"
+              alt=""
+              width={50}
+              height={50}
+              className=""
+            />
+            <div className="w-full mt-2 flex flex-col items-center">
+              <div className="text-base mb-1">Distribution</div>
+              <div className="text-sm text-black/70 max-w-[200px]">
+                Delivered straight to you, ensuring every sip is perfect.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
