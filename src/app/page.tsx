@@ -28,6 +28,18 @@ export default function Home() {
   window.scrollTo(0, 0);
 }, []);
 
+// Close menu when scrolling
+useEffect(() => {
+  const handleScroll = () => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  };
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [isOpen]);
+
+
   return (
     <div id="home">
       {/* Orange section */}
@@ -56,8 +68,8 @@ export default function Home() {
             </button>
 
             {isOpen && (
-              <div className="fixed top-0 left-0 w-screen bg-[#1e2339] text-white p-6 z-40 rounded-b-3xl">
-                <div className="mb-4 mt-[-16px] ml-[5px]">
+              <div className="fixed top-0 left-0 w-screen bg-[#1e2339] text-white  z-40 rounded-b-3xl">
+                <div className="mb-4 mt-[-16px] ml-[-8px] pl-6 pt-6">
                   <Image
                     src="/images/adhira-logo.png"
                     alt="Logo"
@@ -65,7 +77,7 @@ export default function Home() {
                     height={90}
                   />
                 </div>
-                <ul className="flex flex-col gap-2">
+                <ul className="flex flex-col gap-2 px-2 pb-4">
                   <a
                     href="#why-us"
                     className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer"
