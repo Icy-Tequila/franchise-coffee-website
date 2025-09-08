@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Menu, X, ChevronUp } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import WhyUs from "../sections/why-us";
+import OurStory from "../sections/our-story";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,22 +24,21 @@ export default function Home() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // useEffect(() => {
+  //   // Scroll to top on initial load
+  //   window.scrollTo(0, 0);
+  // }, []);
+
+  // Close menu when scrolling
   useEffect(() => {
-  // Scroll to top on initial load
-  window.scrollTo(0, 0);
-}, []);
-
-// Close menu when scrolling
-useEffect(() => {
-  const handleScroll = () => {
-    if (isOpen) {
-      setIsOpen(false);
-    }
-  };
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, [isOpen]);
-
+    const handleScroll = () => {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isOpen]);
 
   return (
     <div id="home">
@@ -145,6 +145,9 @@ useEffect(() => {
 
       <div id="why-us" className="relative">
         <WhyUs />
+        <div id="our-story">
+          <OurStory />
+        </div>
 
         {/* Sticky scroll-up button */}
         <div className="sticky bottom-5 mr-5 flex justify-end mt-4">
