@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Stores() {
   return (
-    <div className="flex flex-col items-center baloo-2">
+    <div className="flex flex-col items-center baloo-2 w-[90%]">
       <div className="flex flex-col items-center lg:my-15">
         <div className="w-full max-w-[600px] garamond text-3xl lg:text-6xl text-[#1e2339] text-center mt-7 mb-5  mx-10">
           Whole nation&apos;s about to drink{" "}
@@ -17,7 +17,7 @@ export default function Stores() {
           Request Franchise
         </button>
       </div>
-      <div className="my-10 w-[90%] grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
+      <div className="my-10 w-full grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
         <div className="grid grid-cols-2 gap-4 mb-5">
           <div className="flex flex-col items-center gap-1">
             <div className="w-full h-23 border-7 border-[#ffe8de] rounded-full overflow-hidden">
@@ -97,7 +97,7 @@ export default function Stores() {
           </div>
         </div>
       </div>
-      <div className="w-[90%] h-auto border-6 border-[#fffaf7] outline-[2.5px] outline-black rounded-2xl">
+      <div className="w-full h-auto border-6 border-[#fffaf7] outline-[2.5px] outline-black rounded-2xl">
         <div className="border border-[#f5e9e4] w-full h-auto rounded-2xl flex flex-col items-center p-3">
           <div className="flex justify-around items-center w-full">
             <div className="w-full h-[2px] bg-[#ff5100]"></div>
@@ -304,26 +304,32 @@ export default function Stores() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr] mt-15 lg:items-center w-[90%] md:w-[80%]">
-        <div className="flex justify-center md:justify-start"><div className="w-[120px] md:w-[150px] lg:w-[200px] h-[120px] md:h-[150px] lg:h-[200px] border-7 border-[#ffe8de] rounded-full overflow-hidden relative ">
-          <Image
-            src="/images/chef-renjith.avif"
-            fill
-            alt="Framed"
-            className="object-cover"
-          />
-        </div></div>
-        <div><div className="garamond text-3xl md:text-6xl text-[#1e2339] text-center md:text-start mt-7 lg:mt-0">
-          <span className="text-[#ff5100]">Deliciously </span>Fabulous
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_3fr] mt-15 lg:items-center w-full md:w-[80%]">
+        <div className="flex justify-center md:justify-start">
+          <div className="w-[120px] md:w-[150px] lg:w-[200px] h-[120px] md:h-[150px] lg:h-[200px] border-7 border-[#ffe8de] rounded-full overflow-hidden relative ">
+            <Image
+              src="/images/chef-renjith.avif"
+              fill
+              alt="Framed"
+              className="object-cover"
+            />
+          </div>
         </div>
-        <div className="text-lg text-center md:text-start mt-7 mb-5 max-w-[600px]">
-          &quot;At Adhira & Appa, every ingredient, every flavour, tells a story
-          that&apos;s close to the heart bringing tradition, innovation, and
-          warmth to every cup.&quot; <br></br>
+        <div>
+          <div className="garamond text-3xl md:text-6xl text-[#1e2339] text-center md:text-start mt-7 lg:mt-0">
+            <span className="text-[#ff5100]">Deliciously </span>Fabulous
+          </div>
+          <div className="text-lg text-center md:text-start mt-7 mb-5 max-w-[600px]">
+            &quot;At Adhira & Appa, every ingredient, every flavour, tells a
+            story that&apos;s close to the heart bringing tradition, innovation,
+            and warmth to every cup.&quot; <br></br>
+          </div>
+          <div className="font-semibold text-center md:text-start">
+            Chef. Renjith
+          </div>
         </div>
-        <div className="font-semibold text-center md:text-start">Chef. Renjith</div></div>
       </div>
-      <div className="flex flex-col mt-15 items-center w-[90%]">
+      <div className="flex flex-col mt-15 items-center w-full">
         <div className="w-[70%] lg:mb-5">
           <div className="text-xl text-center my-2">Supply Chain</div>
           <div className="text-base text-center text-gray-500">
@@ -390,6 +396,45 @@ export default function Stores() {
               <div className="text-sm text-black/70 max-w-[200px]">
                 Delivered straight to you, ensuring every sip is perfect.
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="grid lg:grid-cols-2 bg-[#1e2339] w-full p-3 h-auto rounded-2xl my-10">
+        <div className="w-full h-[200px] lg:h-full rounded-xl overflow-hidden relative">
+          <Image
+            src="/images/single-origin.avif"
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="flex flex-col gap-2 p-2 lg:p-10">
+          <div className="text-white text-lg">
+            Single origin to Story Beans®
+          </div>
+          <div className="text-gray-400">
+            Every bean has a journey, and ours begins with a single origin—a
+            commitment to quality that tells a story in every cup. From the lush
+            plantations of Kerala, Karnataka, and Tamil Nadu, Adhira & Appa
+            brings you coffee that embodies connection, tradition, and care.
+            More than just a coffee shop, we create experiences that celebrate
+            authentic flavors and heartfelt moments.
+          </div>
+          <div className="text-[#ff5100]">Our Prime Location</div>
+          <div className="w-full h-[0.5px] bg-gray-600"></div>
+          <div className="flex justify-between text-white pt-2 text-sm">
+            <div className="flex gap-2 items-center">
+              <Image src="/images/loc-1.png" alt="" width={30} height={10} />
+              <div>Kerala</div>
+            </div>
+            <div className="flex gap-2 items-center">
+              <Image src="/images/loc-2.png" alt="" width={30} height={10} />
+              <div>Karnataka</div>
+            </div>
+            <div className="flex gap-2 items-center">
+              <Image src="/images/loc-3.png" alt="" width={30} height={10} />
+              <div>Tamilnadu</div>
             </div>
           </div>
         </div>

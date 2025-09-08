@@ -25,10 +25,10 @@ export default function Home() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // useEffect(() => {
-  //   // Scroll to top on initial load
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    // Scroll to top on initial load
+    window.scrollTo(0, 0);
+  }, []);
 
   // Close menu when scrolling
   useEffect(() => {
@@ -149,7 +149,7 @@ export default function Home() {
         <div id="our-story">
           <OurStory />
         </div>
-        <Stores />
+        <div className="flex justify-center"><Stores /></div>
 
         {/* Sticky scroll-up button */}
         <div className="sticky bottom-5 mr-5 flex justify-end mt-4">
