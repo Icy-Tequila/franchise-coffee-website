@@ -5,6 +5,7 @@ import { Menu, X, ChevronUp } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import WhyUs from "../sections/why-us";
 import OurStory from "../sections/our-story";
+import Stores from "../sections/Stores";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -148,6 +149,7 @@ export default function Home() {
         <div id="our-story">
           <OurStory />
         </div>
+        <Stores />
 
         {/* Sticky scroll-up button */}
         <div className="sticky bottom-5 mr-5 flex justify-end mt-4">
