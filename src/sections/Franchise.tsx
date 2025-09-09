@@ -77,6 +77,34 @@ export default function Franchise() {
           </div>
         </div>
       </div>
+      <div className="w-[90%] lg:w-[85%] mt-10 grid lg:grid-cols-2 lg:gap-10">
+        <div className="flex flex-col gap-5 lg:order-3">
+          <div className="garamond text-3xl md:text-5xl">
+            Quick market
+            <span className="text-[#ff5100]"> insights</span>
+          </div>
+          <div className="text-md lg:text-lg">
+            Unlike every other coffee brand, we&apos;re promoting India&apos;s
+            homegrown coffee culture through our coffee cafe franchise in India,
+            creating a coffee shop experience that feels both authentic and
+            welcoming.
+          </div>
+        </div>
+        <div className="lg:col-span-2 grid grid-cols-2 w-full gap-5 lg:gap-8 my-5 lg:mb-0 lg:min-h-[170px]">
+          <div className="flex flex-col items-center lg:items-start justify-center p-7 bg-white border border-[#edd8ce] rounded-2xl">
+            <div className="text-3xl lg:text-6xl">$1.2billion</div>
+            <div className="text-sm lg:text-lg">will reach by 2030</div>
+          </div>
+          <div className="flex flex-col items-center lg:items-start text-center justify-center p-7 bg-white border border-[#edd8ce] rounded-2xl">
+            <div className="text-3xl lg:text-6xl">63.16%</div>
+            <div className="text-sm lg:text-lg">Growth in consumption</div>
+          </div>
+        </div>
+        <div className="flex flex-col items-center lg:items-start justify-center p-7 bg-white border border-[#edd8ce] rounded-2xl lg:order-4">
+          <div className="text-3xl lg:text-6xl">1Year</div>
+          <div className="text-sm lg:text-lg">to Break Even</div>
+        </div>
+      </div>
     </div>
   );
 }
