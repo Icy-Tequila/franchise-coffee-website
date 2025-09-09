@@ -92,12 +92,12 @@ export default function Home() {
                   >
                     Franchise
                   </li>
-                  <li
+                  <a href="#our-story"
                     className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer"
                     onClick={() => setIsOpen(false)}
                   >
                     Our Story
-                  </li>
+                  </a>
                   <li
                     className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer"
                     onClick={() => setIsOpen(false)}
