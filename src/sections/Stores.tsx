@@ -1,11 +1,46 @@
 import React from "react";
 import Image from "next/image";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Stores() {
+  const [index, setIndex] = useState(0);
+
+  const testimonials = [
+    {
+      id: 1,
+      title: "Filter Coffee Lover",
+      text: "Adhira & Appa serves the best filter coffee I’ve ever had! The aroma and richness in every cup is unmatched, making it my favorite go-to place. Their dedication to quality truly stands out.",
+      author: "Arun Sehkar",
+      location: "Kochi, Kerala",
+      img: "/images/arun-shekar.avif",
+      badge: "/images/filter-coffee.png",
+    },
+    {
+      id: 2,
+      title: "Samoosa Lover",
+      text: "The samosas at Adhira & Appa are perfection! Crispy, flavorful, and just the right amount of spice. Paired with their filter coffee, it's the perfect snack combo I crave every time!",
+      author: "Rahul K",
+      location: "Chennai",
+      img: "/images/rahul-k.avif",
+      badge: "/images/samoosa.avif",
+    },
+    // ➕ add more here
+  ];
+
+  const prevTestimonial = () => {
+    setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const nextTestimonial = () => {
+    setIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const t = testimonials[index];
   return (
-    <div className="flex flex-col items-center baloo-2 w-[90%]">
+    <div className="flex flex-col items-center baloo-2 w-[90%] text-[#1e2339]">
       <div className="flex flex-col items-center lg:my-15">
-        <div className="w-full max-w-[600px] garamond text-3xl lg:text-6xl text-[#1e2339] text-center mt-7 mb-5  mx-10">
+        <div className="w-full max-w-[600px] garamond text-3xl lg:text-6xl text-center mt-7 mb-5  mx-10">
           Whole nation&apos;s about to drink{" "}
           <span className="text-[#ff5100]">Our coffee.</span>
         </div>
@@ -482,6 +517,71 @@ export default function Stores() {
         </div>{" "}
       </div>{" "}
       <div className="w-full h-[0.5px] bg-gray-300 my-10"></div>
+      <div className="w-[90%] lg:w-[80%]  text-center">
+        <div className="garamond text-4xl md:text-5xl mt-7 mb-12 lg:mb-0">
+          Authentic Taste, <span className="text-[#ff5100]">Loved by Many</span>
+        </div>
+        <div className="baloo-2 text-base mt-7 mb-12 lg:mb-18 mx-5">
+          See why coffee and snack lovers across India can&apos;t get enough of
+          Adhira & Appa!
+        </div>
+      </div>
+      <div className="relative w-full lg:w-[80%] h-auto border-10 border-[#fffaf7] outline-[6px] outline-[#f5e9e4] rounded-4xl">
+        {/* Card */}
+        <div className="grid lg:grid-cols-[2fr_1fr] lg:gap-10 w-full h-[550px] lg:h-[280px] border border-[#f5e9e4] bg-[#ffefe7] p-6 rounded-3xl">
+          {/* Image */}
+          <div className="relative lg:order-2">
+            <div className="w-full h-[200px] lg:h-[220px] border-10 border-[#ffcfb8] rounded-full overflow-hidden relative">
+              <Image
+                src={t.img}
+                fill
+                alt="Framed"
+                className="object-cover object-[50%_25%]"
+              />
+            </div>
+            <div className="w-15 h-15 bg-[#ff5100] rounded-full absolute bottom-5 flex items-center justify-center">
+              <Image
+                src={t.badge}
+                alt="Badge"
+                width={50}
+                height={50}
+                className="object-contain rounded-full"
+              />
+            </div>
+          </div>
+
+          {/* Text */}
+          <div className="mt-7 lg:mt-0 lg:order-1">
+            <div className="flex items-center">
+              <div className="w-70 text-lg lg:text-xl garamond text-[#ff5100]">
+                {t.title}
+              </div>
+              <div className="w-full h-[2px] bg-[#fbeae2]"></div>
+            </div>
+            <div className="text-base my-7">{t.text}</div>
+            <div className="text-lg font-semibold">{t.author}</div>
+            <div className="text-sm">{t.location}</div>
+          </div>
+        </div>
+
+        {/* Navigation Buttons */}
+        {index > 0 && (
+          <button
+            onClick={prevTestimonial}
+            className="absolute top-1/2 left-2 -translate-y-1/2 w-10 h-10 bg-black/20 rounded-full flex items-center justify-center hover:bg-black/30 transition cursor-pointer"
+          >
+            <ChevronLeft className="text-white w-6 h-6" />
+          </button>
+        )}
+        {index < testimonials.length - 1 && (
+          <button
+            onClick={nextTestimonial}
+            className="absolute top-1/2 right-2 -translate-y-1/2 w-10 h-10 bg-black/20 rounded-full flex items-center justify-center hover:bg-black/30 transition cursor-pointer"
+          >
+            <ChevronRight className="text-white w-6 h-6" />
+          </button>
+        )}
+      </div>
     </div>
   );
 }
