@@ -92,18 +92,20 @@ export default function Home() {
                   >
                     Franchise
                   </li>
-                  <a href="#our-story"
+                  <a
+                    href="#our-story"
                     className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer"
                     onClick={() => setIsOpen(false)}
                   >
                     Our Story
                   </a>
-                  <li
+                  <a
+                    href="#stores"
                     className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer"
                     onClick={() => setIsOpen(false)}
                   >
                     Stores
-                  </li>
+                  </a>
                 </ul>
               </div>
             )}
@@ -149,7 +151,9 @@ export default function Home() {
         <div id="our-story">
           <OurStory />
         </div>
-        <div className="flex justify-center"><Stores /></div>
+        <div id="stores" className="flex justify-center">
+          <Stores />
+        </div>
 
         {/* Sticky scroll-up button */}
         <div className="sticky bottom-5 mr-5 flex justify-end mt-4">
