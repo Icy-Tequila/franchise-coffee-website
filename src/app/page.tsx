@@ -6,6 +6,7 @@ import { useState, useRef, useEffect } from "react";
 import WhyUs from "../sections/why-us";
 import OurStory from "../sections/our-story";
 import Stores from "../sections/Stores";
+import Franchise from "../sections/Franchise";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,12 +87,13 @@ export default function Home() {
                   >
                     Why us
                   </a>
-                  <li
+                  <a
+                    href="#franchise"
                     className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer"
                     onClick={() => setIsOpen(false)}
                   >
                     Franchise
-                  </li>
+                  </a>
                   <a
                     href="#our-story"
                     className="py-2 px-3 hover:bg-[#2b2f45] rounded cursor-pointer"
@@ -153,6 +155,9 @@ export default function Home() {
         </div>
         <div id="stores" className="flex justify-center">
           <Stores />
+        </div>
+        <div id="franchise" className="flex justify-center">
+          <Franchise />
         </div>
 
         {/* Sticky scroll-up button */}
