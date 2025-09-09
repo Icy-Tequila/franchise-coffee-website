@@ -439,6 +439,49 @@ export default function Stores() {
           </div>
         </div>
       </div>
+      <div className="w-full grid lg:grid-cols-[2fr_6fr] lg:mt-3">
+        <div className="flex justify-center lg:justify-start garamond text-3xl md:text-4xl text-[#1e2339] text-center mb-7">
+          Certifications
+        </div>
+        <div className="w-full h-[40px] flex justify-around gap-5">
+          <Image
+            src="/images/cert-1.avif"
+            alt="Certificate"
+            height={80}
+            width={100}
+            className="w-auto h-full object-contain"
+          />
+          <Image
+            src="/images/cert-2.avif"
+            alt="Certificate"
+            height={80}
+            width={100}
+            className="w-auto h-full object-contain"
+          />
+          <Image
+            src="/images/cert-3.avif"
+            alt="Certificate"
+            height={80}
+            width={100}
+            className="w-auto h-full object-contain"
+          />
+          <Image
+            src="/images/cert-4.avif"
+            alt="Certificate"
+            height={80}
+            width={100}
+            className="w-auto h-full object-contain"
+          />
+          <Image
+            src="/images/cert-5.avif"
+            alt="Certificate"
+            height={80}
+            width={100}
+            className="w-auto h-full object-contain"
+          />
+        </div>{" "}
+      </div>{" "}
+      <div className="w-full h-[0.5px] bg-gray-300 my-10"></div>
     </div>
   );
 }
