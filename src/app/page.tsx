@@ -43,7 +43,7 @@ export default function Home() {
   }, [isOpen]);
 
   return (
-    <div id="home">
+    <div id="home" className="baloo-2 text-[#1e2339]">
       {/* Orange section */}
       <div className="relative bg-[#ff5100] w-full min-h-screen overflow-hidden">
         {/* Header */}
