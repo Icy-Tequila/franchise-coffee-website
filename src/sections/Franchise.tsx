@@ -2,7 +2,15 @@
 import React from "react";
 import Image from "next/image";
 import { useState, ChangeEvent, FormEvent } from "react";
-import { UserRound, Mail } from "lucide-react";
+import { UserRound, Mail, ChevronLeft, ChevronRight } from "lucide-react";
+
+const images = [
+  "/images/cafe-gallery-1.avif",
+  "/images/cafe-gallery-2.avif",
+  "/images/cafe-gallery-3.avif",
+  "/images/cafe-gallery-4.avif",
+  "/images/cafe-gallery-5.avif",
+];
 
 export default function Franchise() {
   const [formData, setFormData] = useState({
@@ -25,6 +33,16 @@ export default function Franchise() {
     e.preventDefault();
     console.log("Form Submitted:", formData);
     // You can connect API / email service here
+  };
+
+  const [current, setCurrent] = useState(0);
+
+  const prevImage = () => {
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextImage = () => {
+    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
   return (
@@ -133,13 +151,43 @@ export default function Franchise() {
         </div>
       </div>
       <div className="w-[90%] lg:w-[85%] grid lg:grid-cols-2 mt-10 bg-white gap-10">
-        <div className="w-full h-[500px] rounded-xl overflow-hidden relative">
+        <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
           <Image
-            src="/images/cafe-gallery-1.avif"
-            alt=""
+            src={images[current]}
+            alt={`Cafe gallery image ${current + 1}`}
             fill
-            className="object-cover"
+            unoptimized
+            className="object-cover transition-all duration-500"
           />
+
+          {/* Prev button */}
+          <button
+            onClick={prevImage}
+            className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 cursor-pointer"
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          {/* Next button */}
+          <button
+            onClick={nextImage}
+            className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 cursor-pointer"
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          {/* Small dots indicator */}
+          <div className="absolute bottom-4 w-full flex justify-center space-x-2">
+            {images.map((_, idx) => (
+              <span
+                key={idx}
+                onClick={() => setCurrent(idx)}
+                className={`w-2 h-2 rounded-full cursor-pointer ${
+                  current === idx ? "bg-white" : "bg-gray-400"
+                }`}
+              />
+            ))}
+          </div>
         </div>
         <div className="w-full flex flex-col items-center justify-center">
           <div className="w-[80%] garamond text-3xl md:text-4xl">
