@@ -47,7 +47,7 @@ export default function Franchise() {
 
   return (
     <div className="w-full py-10 flex flex-col items-center mt-10 lg:mt-15">
-      <div className="w-full bg-[#feeae3] flex flex-col py-10">
+      <div className="w-full bg-[#feeae3] flex flex-col items-center py-10">
         <div className="w-[90%] lg:w-[85%]">
           <div className="grid lg:grid-cols-[2fr_1fr] gap-5 items-end">
             <div className="garamond text-3xl md:text-6xl">
