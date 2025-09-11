@@ -43,11 +43,11 @@ export default function Home() {
   }, [isOpen]);
 
   return (
-    <div id="home" className="baloo-2 text-[#1e2339]">
+    <div id="home" className="baloo-2 text-[#1e2339] ">
       {/* Orange section */}
-      <div className="relative bg-[#ff5100] w-full min-h-screen overflow-hidden">
-        {/* Header */}
-        <div className="w-full flex justify-between relative">
+      <div className="relative bg-[#ff5100] w-full min-h-screen overflow-hidden flex flex-col items-center">
+        {/* Mobile Header */}
+        <nav className="w-full flex justify-between relative lg:hidden">
           <Image
             src="/images/adhira-logo.png"
             alt="Logo"
@@ -112,7 +112,22 @@ export default function Home() {
               </div>
             )}
           </div>
-        </div>
+        </nav>
+
+        {/* Desktop Header */}
+        <nav className="hidden lg:flex w-[80%] h-70px] justify-around items-center text-white">
+          <a href="#why-us">Why Us</a>
+          <a href="#franchise">Franchise</a>
+          <Image
+            src="/images/adhira-logo.png"
+            alt="Logo"
+            width={90}
+            height={90}
+            className="ml-4 mt-2 "
+          />
+          <a href="#our-story">Our Story</a>
+          <a href="#stores">Stores</a>
+        </nav>
 
         {/* Title */}
         <div className="lobster-regular text-white text-8xl text-center mt-7 mb-12">
