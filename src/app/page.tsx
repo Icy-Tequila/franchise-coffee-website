@@ -181,14 +181,20 @@ export default function Home() {
           />
           <div className="lg:w-[25%] lg:order-1 flex flex-col justify-between">
             <ul className="flex flex-col gap-3 text-sm">
-              <a href="#why-us">Why Us</a>
-              <a href="#franchise">Franchise Benefits</a>
-              <a href="#stores">Our Stores</a>
+              <a href="#why-us" className="hover:text-[#ff7028]">
+                Why Us
+              </a>
+              <a href="#franchise" className="hover:text-[#ff7028]">
+                Franchise Benefits
+              </a>
+              <a href="#stores" className="hover:text-[#ff7028]">
+                Our Stores
+              </a>
             </ul>
 
             <div className="grid grid-cols-2 my-10">
               <ul className="flex flex-col gap-3">
-                <a href="" className="flex gap-1">
+                <a href="" className="flex gap-1 hover:text-[#ff7028]">
                   <Image
                     src="/images/instagram-icon.png"
                     alt=""
@@ -197,7 +203,7 @@ export default function Home() {
                   />
                   <div>Instagram</div>
                 </a>
-                <a href="" className="flex gap-1">
+                <a href="" className="flex gap-1 hover:text-[#ff7028]">
                   <Image
                     src="/images/fb-icon.png"
                     alt=""
@@ -206,7 +212,7 @@ export default function Home() {
                   />
                   <div>Facebook</div>
                 </a>
-                <a href="" className="flex gap-1">
+                <a href="" className="flex gap-1 hover:text-[#ff7028]">
                   <Image
                     src="/images/tiktok-icon.png"
                     alt=""
@@ -217,7 +223,7 @@ export default function Home() {
                 </a>
               </ul>
               <ul className="flex flex-col gap-3">
-                <a href="" className="flex gap-1">
+                <a href="" className="flex gap-1 hover:text-[#ff7028]">
                   <Image
                     src="/images/linkedin-icon.png"
                     alt=""
@@ -226,7 +232,7 @@ export default function Home() {
                   />
                   <div>LinkedIn</div>
                 </a>
-                <a href="" className="flex gap-1">
+                <a href="" className="flex gap-1 hover:text-[#ff7028]">
                   <Image
                     src="/images/yt-icon.png"
                     alt=""
@@ -235,7 +241,7 @@ export default function Home() {
                   />
                   <div>Youtube</div>
                 </a>
-                <a href="" className="flex gap-1">
+                <a href="" className="flex gap-1 hover:text-[#ff7028]">
                   <Image
                     src="/images/whatsapp-icon.png"
                     alt=""
@@ -252,10 +258,18 @@ export default function Home() {
           </div>
           <div className="lg:w-[25%] flex flex-col justify-between lg:order-3">
             <div className="flex flex-col gap-3">
-              <div className="text-gray-500">Reach out to us</div>
-              <a href="">hello@adhiraandappacoffee.com</a>
-              <a href="">+91 86557 79836</a>
-              <a href="">Visit us</a>
+              <div className="text-gray-500 hover:text-[#ff7028]">
+                Reach out to us
+              </div>
+              <a href="" className="hover:text-[#ff7028]">
+                hello@adhiraandappacoffee.com
+              </a>
+              <a href="" className="hover:text-[#ff7028]">
+                +91 86557 79836
+              </a>
+              <a href="" className="hover:text-[#ff7028]">
+                Visit us
+              </a>
             </div>
             <div className="text-gray-500 my-10 lg:mb-0">
               Brand By EBG Group (Think Ebikego Pvt. Ltd.)
