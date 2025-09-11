@@ -158,9 +158,12 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#ff5100] to-transparent z-3" />
 
         {/* Request Franchise Button */}
-        <button className="absolute bottom-13 left-1/2 -translate-x-1/2 z-4 bg-white rounded-full text-[#ff5100] border border-[#ff5100] text-sm px-5 py-2 cursor-pointer">
+        <a
+          href="#franchise"
+          className="absolute bottom-13 left-1/2 -translate-x-1/2 z-4 bg-white rounded-full text-[#ff5100] border border-[#ff5100] text-sm px-5 py-2 cursor-pointer"
+        >
           Request Franchise
-        </button>
+        </a>
       </div>
       <div id="why-us" className="relative">
         <WhyUs />

@@ -48,9 +48,12 @@ export default function Stores() {
           Join our initiative and be part of the growing coffee cafe franchise
           market in India.
         </div>
-        <button className="bg-white rounded-full text-[#ff5100] border border-[#d64502] text-sm px-5 p-2.5 cursor-pointer shadow-[0_2px_0_0_#ff5100]">
+        <a
+          href="#franchise"
+          className="bg-white rounded-full text-[#ff5100] border border-[#d64502] text-sm px-5 p-2.5 cursor-pointer shadow-[0_2px_0_0_#ff5100]"
+        >
           Request Franchise
-        </button>
+        </a>
       </div>
       <div className="my-10 w-full grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
         <div className="grid grid-cols-2 gap-4 mb-5">

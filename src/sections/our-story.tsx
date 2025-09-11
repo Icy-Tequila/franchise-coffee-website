@@ -39,9 +39,12 @@ export default function OurStory() {
             there&apos;s a story in every sip of coffee.
           </div>
           <div className="flex justify-center lg:justify-start">
-            <button className="baloo-2 bg-white rounded-full text-[#ff5100] border border-[#d64502] text-sm px-5 p-2.5 cursor-pointer shadow-[0_2px_0_0_#ff5100]">
+            <a
+              href="#franchise"
+              className="baloo-2 bg-white rounded-full text-[#ff5100] border border-[#d64502] text-sm px-5 p-2.5 cursor-pointer shadow-[0_2px_0_0_#ff5100]"
+            >
               Request Franchise
-            </button>
+            </a>
           </div>
         </div>
         <YouTubeEmbed url="https://www.youtube.com/watch?v=JgtbM6e72W0&t=1s" />
