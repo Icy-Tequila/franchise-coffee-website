@@ -26,10 +26,10 @@ export default function Home() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  useEffect(() => {
-    // Scroll to top on initial load
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   // Scroll to top on initial load
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   // Close menu when scrolling
   useEffect(() => {
@@ -147,7 +147,6 @@ export default function Home() {
           Request Franchise
         </button>
       </div>
-
       <div id="why-us" className="relative">
         <WhyUs />
         <div id="our-story">
@@ -169,6 +168,104 @@ export default function Home() {
             <ChevronUp className="text-[#ff5100]" />
           </div>
         </div>
+      </div>{" "}
+      <div className="w-full h-[0.5px] bg-[#e9d3ca]"></div>
+      <div className="w-full flex justify-center text-sm">
+        <footer className="w-full bg-[#fffefc] p-5 lg:p-10 flex flex-col lg:flex-row lg:justify-between">
+          <Image
+            src="/images/adhira-logo-footer.png"
+            alt=""
+            width={90}
+            height={100}
+            className="my-10 lg:w-40 lg:order-2"
+          />
+          <div className="lg:w-[25%] lg:order-1 flex flex-col justify-between">
+            <ul className="flex flex-col gap-3 text-sm">
+              <a href="#why-us">Why Us</a>
+              <a href="#franchise">Franchise Benefits</a>
+              <a href="#stores">Our Stores</a>
+            </ul>
+
+            <div className="grid grid-cols-2 my-10">
+              <ul className="flex flex-col gap-3">
+                <a href="" className="flex gap-1">
+                  <Image
+                    src="/images/instagram-icon.png"
+                    alt=""
+                    width={20}
+                    height={20}
+                  />
+                  <div>Instagram</div>
+                </a>
+                <a href="" className="flex gap-1">
+                  <Image
+                    src="/images/fb-icon.png"
+                    alt=""
+                    width={20}
+                    height={20}
+                  />
+                  <div>Facebook</div>
+                </a>
+                <a href="" className="flex gap-1">
+                  <Image
+                    src="/images/tiktok-icon.png"
+                    alt=""
+                    width={20}
+                    height={20}
+                  />
+                  <div>Tiktok</div>
+                </a>
+              </ul>
+              <ul className="flex flex-col gap-3">
+                <a href="" className="flex gap-1">
+                  <Image
+                    src="/images/linkedin-icon.png"
+                    alt=""
+                    width={21}
+                    height={21}
+                  />
+                  <div>LinkedIn</div>
+                </a>
+                <a href="" className="flex gap-1">
+                  <Image
+                    src="/images/yt-icon.png"
+                    alt=""
+                    width={20}
+                    height={20}
+                  />
+                  <div>Youtube</div>
+                </a>
+                <a href="" className="flex gap-1">
+                  <Image
+                    src="/images/whatsapp-icon.png"
+                    alt=""
+                    width={20}
+                    height={20}
+                  />
+                  <div>Whatsapp</div>
+                </a>
+              </ul>
+            </div>
+            <div className="hidden text-gray-500 lg:flex">
+              © 2024, Adhira and appa
+            </div>
+          </div>
+          <div className="lg:w-[25%] flex flex-col justify-between lg:order-3">
+            <div className="flex flex-col gap-3">
+              <div className="text-gray-500">Reach out to us</div>
+              <a href="">hello@adhiraandappacoffee.com</a>
+              <a href="">+91 86557 79836</a>
+              <a href="">Visit us</a>
+            </div>
+            <div className="text-gray-500 my-10 lg:mb-0">
+              Brand By EBG Group (Think Ebikego Pvt. Ltd.)
+            </div>
+            <div className="w-full h-[0.5px] bg-[#e9d3ca] lg:hidden"></div>
+            <div className="text-gray-500 my-10 lg:hidden">
+              © 2024, Adhira and appa
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
